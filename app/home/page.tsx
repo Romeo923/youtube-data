@@ -4,7 +4,7 @@ import { youtube_v3 } from "googleapis"
 import YoutubeVideo from "@/components/YoutubeVideo"
 
 export default async function Home() {
-	const res = await fetch(`/api/youtube`, {
+	const res = await fetch(`http://localhost:3000/api/youtube`, {
 		next: { revalidate: 90 },
 	})
 	const data: youtube_v3.Schema$Video[] = await res.json()
