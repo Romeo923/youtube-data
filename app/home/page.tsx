@@ -78,6 +78,9 @@ const Home = () => {
   const navigateToChannel = () => {
     router.push("/channels");
   };
+  const navigateToVideo = () => {
+    router.push("/videoCategory");
+  };
   return (
     <>
       <div className="flex flex-1 justify-center my-2">
@@ -87,6 +90,13 @@ const Home = () => {
           onClick={navigateToChannel}
         >
           View Channels
+        </button>
+        <button
+          type="button"
+          className=" ml-5 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          onClick={navigateToVideo}
+        >
+          View Video Category
         </button>
       </div>
       <section>

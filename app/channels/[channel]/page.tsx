@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import ChannelSubscriptions from "@/components/ChannelSubscriptions";
+import Playlist from "@/components/Playlist";
 const Channel = ({ params }: any) => {
   const [channelData, setChannelData] = useState<any>(null);
   useEffect(() => {
@@ -92,6 +93,7 @@ const Channel = ({ params }: any) => {
                 </div>
               </div>
               <ChannelSubscriptions channelData={channelData} />
+              <Playlist channelData={channelData} />
             </div>
           </div>
         </div>
